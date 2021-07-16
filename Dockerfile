@@ -29,6 +29,6 @@ RUN mkdir ${ARTIFACT_TARGET} \
 WORKDIR ${ARTIFACT_TARGET}
 COPY --from=0 ${EXECUTABLE_ARTIFACT} .
 
-EXPOSE 8080
+EXPOSE 7001
 
-CMD ["java", "-jar", "/opt/transformer/format-transformer-persister-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "/opt/transformer/format-transformer-persister-0.0.1-SNAPSHOT.jar", "--spring.profiles.active=k8s"]
