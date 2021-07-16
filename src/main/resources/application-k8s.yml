@@ -17,5 +17,3 @@ spring:
 
   rabbitmq:
     host: rabbitmq.io
-    username: quest
-    password: quest
