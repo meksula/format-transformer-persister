@@ -14,3 +14,8 @@ spring:
     url: jdbc:postgresql://postgresql-db.io:5432/format_transformer
     username: postgres
     password: password
+
+  rabbitmq:
+    host: rabbitmq.io
+    username: quest
+    password: quest
