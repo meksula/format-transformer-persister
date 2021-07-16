@@ -11,6 +11,6 @@ spring:
     show-sql: false
 
   datasource:
-    url: jdbc:postgresql://format-transformer-database.local:5432/format_transformer
+    url: jdbc:postgresql://postgresql-db.io:5432/format_transformer
     username: postgres
     password: password
