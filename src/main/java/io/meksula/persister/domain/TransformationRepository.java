@@ -9,7 +9,4 @@ public interface TransformationRepository extends JpaRepository<TransformationEn
 
     @Query("select distinct t.hostname from TransformationEntity t")
     Set<String> findAllHostnames();
-
-    @Query("select t from TransformationEntity t order by t.id desc")
-    Set<TransformerDto> findRecords();
 }

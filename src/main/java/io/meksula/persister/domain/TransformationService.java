@@ -3,6 +3,7 @@ package io.meksula.persister.domain;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -37,7 +38,7 @@ public class TransformationService {
                 .hostnames(transformationRepository.findAllHostnames())
                 .newestRecordDate(LocalDateTime.now())
                 .oldestRecordDate(LocalDateTime.now())
-                .records(transformationRepository.findAll()
+                .records(transformationRepository.findAll(Pageable.ofSize(10))
                         .stream()
                         .map(transformationEntity -> TransformerDto.builder()
                                 .from(transformationEntity.getFrom())
