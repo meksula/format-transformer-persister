@@ -27,6 +27,7 @@ public class TransformationEntity {
     @Enumerated(EnumType.STRING)
     private TransformerTypes to;
 
+    @Column(columnDefinition = "TEXT")
     private String encodedData;
     private String hostname;
 }
