@@ -11,9 +11,9 @@ spring:
     show-sql: false
 
   datasource:
-    url: jdbc:postgresql://postgresql.service.external:5432/format_transformer
+    url: jdbc:postgresql://${DATABASE_HOST}:5432/format_transformer
     username: postgres
     password: password
 
   rabbitmq:
-    host: production-rabbitmqcluster.default.svc.cluster.local
+    host: ${MESSAGE_BROKER_HOST}
